@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="/home/style.css" type="text/css">
+
+</head>
+<%- include('partials/header.ejs') %>
+<div class="products">
+    <% let count=0 %>
+    <% product.forEach(function(item){ %>
+    <%    if(count==5){%>
+    <%      return; %>
+    <% } %>
+    
+    <div class="divv" id= <%= item.id %>>  
+        
+        <span class="productname" id= <%= item.id %>> <%= item.productName %> </span>
+        <span class="idd" id= <%= item.id %>><%= item.id %></span>
+        <br>
+        <span id= <%= item.id %>><img src="<%= item.filename %>" alt="unable to show" width="200px" height="200px"></span>
+       
+       
+       <br>
+       <button  id= <%= item.id %> type="button" class="btn btn-info e" > view Details</button>
+       <span class="desc" id= <%= item.id %>><%=item.desc%></span>
+       <br>
+       <button id= <%=item.id%> type ="button" class ="btn btn-info f" >Add to Cart</button>
+       <span class="quant" id=<%= item.id %>><%=item.quantity%></span>
+       <span class="price" id=<%= item.id %>><%=item.price%></span>
+       <div  style="color:aliceblue;" class="alert text-center" id=<%= item.id %>>ellkw;                 </div> 
+       <% count++; %>
+    </div>
+    <% }) %>    
+</div>
+<button type="button" class="btn btn-info d" onclick=loadMore()>   Load More</button>
+
+<script src="/home/script.js"></script>
+</body>
+
+</html>

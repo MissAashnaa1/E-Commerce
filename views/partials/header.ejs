@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>E-commerce</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <style>
+            body{
+                background-color: rgb(108, 15, 108);
+                background: linear-gradient(90deg, rgb(152, 62, 230) 0%, rgb(217, 148, 255) 73%, #f5b3f6 100%);
+            }
+            nav{ background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 100%);
+                list-style-type: none;
+                display: inline;
+                float: left;
+                padding:10px;
+                padding-bottom: 20px;
+                margin: 0;
+                display: block;
+                justify-content: space-between;
+                width: 100%;
+                color:beige
+            }
+            body{
+                padding:0;
+                margin: 0;
+            }
+            ul{
+                margin-top: 10px;
+            }
+            li{ display: inline;
+                font-size: 20px;
+              /* ?   padding-top: 25px; */
+                /* margin-top: 20px; */
+                justify-content: space-between;
+                /* justify-content: 250px;   */
+                /* padding-left: 0px; */
+            }
+            a{
+                color:black;
+                font-size: 20px;
+             }
+             .li{
+                margin-right:40px;
+                float:right;
+            }
+
+            #name{
+                float:left;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li id="name">Hey <%= name %> !</li>
+                <li ><a  class="li" href="/logout">Log out</a></li>
+                <li ><a  class="li" href="/changeps">Change Password</a></li>
+                <li class="li" ><a href="/seller">Behave as seller</a></li>
+                <li class="li"><a href="/mybag">My Bag</a></li>
+                <li class="li"><a  href="/">Home</a></li>
+                
+                
+            </ul>
+            
+        </nav>
+    

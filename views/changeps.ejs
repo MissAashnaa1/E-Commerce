@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs') %>
+<br>
+<br>
+<div class="text-center k"><%= msg %></div>
+<% if (clr==1) { %>
+    <style>
+        .k{
+            color:rgb(0, 0, 0);
+        }
+    </style>
+
+<% } else if (clr==2) { %>
+    <style>
+        .k{
+            color:rgb(219, 25, 31);
+        }
+    </style>
+    
+    <% } else { %>
+        <style>
+        .k{
+            color:blue;
+        }</style>
+        
+        <% } %>
+ 
+<form class=" text-center" name="form" action="/changeps" method="post" onsubmit="return validateForm()">
+    <br>
+    <br>
+    Old Password : <input type="password"name="oldp" placeholder="Old Password" required >
+    <br>
+    <br>
+    New Password : <input type="password" placeholder="New Password" required name="newp">
+    <br>
+    <br>
+    <button type="submit" class="btn btn-info">Change </button>
+</form>
+
+</body>
+<script>
+    function validateForm(){
+    if(document.forms["form"]["oldp"].value.trim().length==0){
+        alert("Enter Old password value")
+        return false;
+    }
+    if(document.forms["form"]["newp"].value.trim().length==0){
+        alert("Enter New password value")
+        return false;
+    }
+
+    }
+</script>
+</html>

@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" href="/mybag/style.css" type="text/css">
+</head>
+<%- include('partials/header.ejs') %>
+
+<div class="products">
+
+    <% if(product.length == 0){ %>
+        <div class="text-center">
+            <h1> oops!! no items in your bag !! </h1>
+        </div>
+    <% } %>
+
+
+    
+<% product.forEach(function(item){ %>
+    <div class="divv" id=<%= item.product.id %>>
+        <span class="productname" id= <%= item.product.id %>> <%= item.product.productName %> </span>
+        <span class="idd" id= <%= item.product.id %>><%= item.product.id %></span>
+        <br>
+        <span id= <%= item.product.id %>>
+            <img src="/<%= item.product.filename %>" id=<%= item.product.filename %> alt="unable to show" width="200px" height="200px">
+        </span>
+       <br>
+       <button  id= <%= item.product.id %> type="button" class="btn btn-info e" > view Details</button>
+       <span class="desc" id= <%= item.product.id %>><%=item.product.desc%></span>
+       <br>
+       <div class="text-center">
+        <button id= <%= item.product.id%> type ="button"  class ="btn btn-info inc">+</button>
+        <span id= <%= item.product.id%> class="mx-5"><%= item.quantity %></span>
+        <button id= <%= item.product.id%> type ="button" class ="btn btn-info dec">-</button>
+        <br>
+        <button  id= <%= item.product.id %> type="button" class="btn btn-info del" >Delete</button>
+       </div>
+       <div  style="color:aliceblue;" class="alert text-center" id=<%= item.id %>>ellkw;                 </div> 
+       <span class="price" id=<%= item.product.id %>><%=item.product.price%></span>
+       <span class="quant" id=<%= item.product.id %>><%=item.product.quantity%></span>  
+      
+       <!-- stock h quant class ka  -->
+       
+
+    </div> 
+<% }) %>  
+
+</div>
+</body>
+<script src="/mybag/script.js"></script>
+</html>

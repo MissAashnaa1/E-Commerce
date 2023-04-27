@@ -1,0 +1,26 @@
+.container{
+    margin: 30px;
+/* background-color: aliceblue; */
+align-content: center;
+justify-content: center;
+margin: auto auto;
+padding:auto;
+/* margin-top: 240px; */
+/* b    order-radius: 20%; */
+display: flex;
+}
+#myform{
+    padding:20px;
+    border:black 5px;
+    border-style: double;
+    box-sizing: content-box;
+    margin-top:20px;
+    justify-content: center;
+    align-items: center;
+     background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(38, 30, 191) 0%, rgb(74, 74, 232) 9%, rgba(0,212,255,1) 100%);;
+}
+#desc{
+    height: 200px;
+    width: 800px;
+}

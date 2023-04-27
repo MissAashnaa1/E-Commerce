@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="/seller/style.css" type="text/css">
+</head>
+<%- include('partials/header.ejs') %>
+<div class="container">
+    <div><%= phrase %></div>
+<form name="myForm" id="myForm" action="/seller" method="post" enctype="multipart/form-data">
+    <p>Add Name, image and description of the product....</p>
+    <input type="text" id="name" name="nameF" placeholder="Name of product" required>
+    <br>
+    <br>
+    <input type="file" id="file" name="fileF"  required>
+    <br>
+    <br>
+    <input name="descF" required id="desc" placeholder="Decribe your product..">
+    <br>
+    <br>
+    <input name="quantity" type="number" required id="quant" placeholder="quantity">
+    <br>
+    <br>
+    <input name="price" type="number" required  id="price" placeholder="price">
+    <br>
+    <br>
+    <button type="submit" class="btn bg-info btn-info" id="h">submit</button>
+    <!-- <button type="submit" class="btn bg-info btn-info" value="SubmitI"> -->
+   
+
+</form>
+</div>  
+<script src="/seller/script.js"></script>
+</body>
+
+</html>
